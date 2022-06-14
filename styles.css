@@ -1,0 +1,141 @@
+* {
+    /* border: 1px solid red;   */
+    padding: 0px; 
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Odin";
+    src: url('/css/Norse-Bold.otf') format('opentype');
+}    
+
+
+label{
+
+}
+
+body{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    height: 99vh;
+    background-color: #5e7d44;
+}
+
+.container{
+    display: flex;
+}
+
+.main.container{
+    flex-flow: row nowrap;
+    overflow: hidden;
+    outline: 1px solid #a7cd86;
+    box-shadow: 1px 1px 5px rgb(81, 81, 81);
+    border-radius: 10px;
+    max-width: 60vw;
+    height: 70vh;
+}
+
+.image.container{
+    position: relative;
+    max-width: 40%;
+    border-radius: 10px 0px 0px 10px;
+    
+}
+
+img{
+    max-height: 100%;
+    width: auto;
+    overflow: hidden;
+}
+
+.side_image{
+    border-radius: 10px 0px 0px 10px;
+}
+
+.image_msg{
+    position:absolute;
+    display: flex;
+    padding: 5px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    width: 100%;
+    height: 15%;
+    top: 30%;
+    text-align: center;
+    font-size: 42px;
+    font-family: "Odin";
+}
+
+.form.container{
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    padding-left: 10px;
+    gap: 18px;
+    background-color: rgb(255, 255, 255);
+}
+
+.msg.container{
+    padding: 18px;
+}
+
+.sing-up-data{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    gap: 10px;
+}
+
+.input.container{
+    flex-flow: column nowrap;
+    width: 45%;
+}
+
+input{
+    border: 1px solid silver;
+    border-radius: 3px;
+}
+
+input:optional {
+  border: 1px solid #dee0e4;
+}
+
+input[type="password"]:not(:placeholder-shown):invalid{
+    outline: red;
+    border: 1px solid red;
+}
+
+input:focus{
+    outline: 1px solid blue;
+    box-shadow: 1px 1px 10px 2px rgba(0, 110, 255, 0.25);
+}
+
+button{
+    margin-top: 10px;
+    background-color: #596D48;
+    box-shadow: none;
+    padding: 2px 4px;
+    color: white;
+    border-radius: 5px;
+}
+
+.log_in{
+    text-align: center;
+}
+
+@media (max-width:900px){
+    .main.container{
+        max-width: 80vw;
+        max-height: 80vh;
+    }
+
+    .input.container{
+        width: 90%;
+    }
+
+}
